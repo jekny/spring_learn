@@ -30,6 +30,7 @@ public class test {
 
 //        Car carBean = (Car) applicationContext.getBean("CarBean");
         Car carBean = factory.getBean("CarBean", Car.class);
+        carBean.getLog();
         System.out.println(carBean);
     }
 }
