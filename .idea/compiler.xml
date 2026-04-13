@@ -9,5 +9,7 @@
         <module name="spring001_first" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+    </bytecodeTargetLevel>
   </component>
 </project>
