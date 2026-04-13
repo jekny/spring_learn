@@ -26,7 +26,8 @@ public class test {
         System.out.println(user1);
         user1.study();
 
-        Car carBean = (Car) applicationContext.getBean("CarBean");
+//        Car carBean = (Car) applicationContext.getBean("CarBean");
+        Car carBean = applicationContext.getBean("CarBean", Car.class);
         System.out.println(carBean);
     }
 }
