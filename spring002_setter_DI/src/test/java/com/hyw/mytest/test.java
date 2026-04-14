@@ -1,6 +1,7 @@
 package com.hyw.mytest;
 
 import com.hyw.mytest.bean.service.ConstructService;
+import com.hyw.mytest.bean.service.SimpleService;
 import com.hyw.mytest.bean.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.BeanFactory;
@@ -23,5 +24,8 @@ public class test {
 
         ConstructService constructService1 = beanFactory.getBean("ConstructService1", ConstructService.class);
         constructService1.save();
+
+        SimpleService simpleService1 = beanFactory.getBean("SimpleService1", SimpleService.class);
+        System.out.println(simpleService1.toString());
     }
 }

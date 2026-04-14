@@ -19,4 +19,10 @@
         <constructor-arg index="0" ref="ConstructBean1"/>
     </bean>
 
+    <bean id="SimpleBean1" class="com.hyw.mytest.bean.dao.SimpleBean"/>
+    <bean id="SimpleService1" class="com.hyw.mytest.bean.service.SimpleService">
+        <property name="id" value="20"/>
+        <property name="name" value="hello"/>
+    </bean>
+
 </beans>
