@@ -64,4 +64,13 @@
         </property>
     </bean>
 
+    <bean id="MapService" class="com.hyw.mytest.bean.service.MapService">
+        <property name="maps">
+            <map>
+                <entry key="s" value="s"/>
+                <entry key="m" value="m"/>
+            </map>
+        </property>
+    </bean>
+
 </beans>

@@ -34,5 +34,8 @@ public class test {
 
         SetService setService = beanFactory.getBean("SetService", SetService.class);
         System.out.println(setService.toString());
+
+        MapService mapService = beanFactory.getBean("MapService", MapService.class);
+        System.out.println(mapService.toString());
     }
 }
