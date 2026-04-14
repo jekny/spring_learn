@@ -7,9 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring001_first" />
+        <module name="ademo" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-    </bytecodeTargetLevel>
   </component>
 </project>
