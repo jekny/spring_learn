@@ -37,4 +37,17 @@
         </property>
     </bean>
 
+    <bean id="ArrayService" class="com.hyw.mytest.bean.service.ArrayService">
+        <property name="strings">
+            <array>
+                <value>hello1</value>
+                <value>hello3</value>
+                <value>hello4</value>
+                <value>hello2</value>
+                <value>hello3</value>
+                <value>hello1</value>
+            </array>
+        </property>
+    </bean>
+
 </beans>

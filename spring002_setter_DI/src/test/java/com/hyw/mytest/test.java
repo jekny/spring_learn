@@ -1,9 +1,6 @@
 package com.hyw.mytest;
 
-import com.hyw.mytest.bean.service.ConstructService;
-import com.hyw.mytest.bean.service.ListDIService;
-import com.hyw.mytest.bean.service.SimpleService;
-import com.hyw.mytest.bean.service.UserService;
+import com.hyw.mytest.bean.service.*;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -31,5 +28,8 @@ public class test {
 
         ListDIService listDIService = beanFactory.getBean("ListDIService", ListDIService.class);
         System.out.println(listDIService.toString());
+
+        ArrayService arrayService = beanFactory.getBean("ArrayService", ArrayService.class);
+        System.out.println(arrayService.toString());
     }
 }
