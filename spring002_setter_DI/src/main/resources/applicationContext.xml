@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    先创建两个bean，在产生关联-->
+
+    <bean id="UserBean1" class="com.hyw.mytest.bean.dao.UserBean"/>
+
+    <bean id="UserService1" class="com.hyw.mytest.bean.service.UserService" >
+<!--        通过该属性推断出setter方法名，然后注入-->
+        <property name="userBean" ref="UserBean1"/>
+    </bean>
+
+</beans>

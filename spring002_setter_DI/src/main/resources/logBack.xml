@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds" debug="false">
+
+    <!-- 定义日志文件存储路径和文件名 -->
+    <property name="LOG_HOME" value="/mylog" />
+    <property name="APP_NAME" value="myapplication" />
+
+    <!-- 控制台输出 Appender -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- 日志格式：时间 线程 日志级别 类名(简写) 方法名:行号 - 消息 -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36}.%M\(%line\) - %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <!-- 滚动文件 Appender（按天滚动，保留7天） -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}/${APP_NAME}.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 每天生成一个日志文件 -->
+            <fileNamePattern>${LOG_HOME}/archive/${APP_NAME}.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- 保留7天的历史日志 -->
+            <maxHistory>7</maxHistory>
+            <!-- 总日志文件大小上限，达到后删除旧日志（可选） -->
+            <totalSizeCap>10MB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36}.%M\(%line\) - %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <!-- 针对特定包的日志级别（示例：Spring框架设为WARN，减少干扰） -->
+    <logger name="org.springframework" level="WARN" />
+    <logger name="org.springframework.boot" level="INFO" />
+    <logger name="com.hyw.test" level="DEBUG" />   <!-- 替换为你的项目包名 -->
+
+    <!-- 根日志级别：所有未单独配置的logger继承此级别 -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="FILE" />
+    </root>
+
+</configuration>
