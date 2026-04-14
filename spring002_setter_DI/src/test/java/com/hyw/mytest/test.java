@@ -2,8 +2,13 @@ package com.hyw.mytest;
 
 import com.hyw.mytest.bean.service.*;
 import org.junit.jupiter.api.Test;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+
 
 /**
  * ClassName: test
@@ -14,8 +19,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @Version 1.0
  */
 public class test {
+    private static Logger logger = LoggerFactory.getLogger(test.class);
     @Test
     public void test01(){
+
         BeanFactory beanFactory = new ClassPathXmlApplicationContext("applicationContext.xml");
         UserService userService1 = beanFactory.getBean("UserService1", UserService.class);
         userService1.save();
@@ -37,5 +44,7 @@ public class test {
 
         MapService mapService = beanFactory.getBean("MapService", MapService.class);
         System.out.println(mapService.toString());
+
+        logger.info("my info:");
     }
 }
