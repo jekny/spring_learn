@@ -1,6 +1,7 @@
 package com.hyw.mytest;
 
 import com.hyw.mytest.bean.service.ConstructService;
+import com.hyw.mytest.bean.service.ListDIService;
 import com.hyw.mytest.bean.service.SimpleService;
 import com.hyw.mytest.bean.service.UserService;
 import org.junit.jupiter.api.Test;
@@ -27,5 +28,8 @@ public class test {
 
         SimpleService simpleService1 = beanFactory.getBean("SimpleService1", SimpleService.class);
         System.out.println(simpleService1.toString());
+
+        ListDIService listDIService = beanFactory.getBean("ListDIService", ListDIService.class);
+        System.out.println(listDIService.toString());
     }
 }

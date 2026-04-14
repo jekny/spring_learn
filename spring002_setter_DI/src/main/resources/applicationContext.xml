@@ -25,4 +25,16 @@
         <property name="name" value="hello"/>
     </bean>
 
+    <bean id="ListDIService" class="com.hyw.mytest.bean.service.ListDIService">
+        <property name="lists">
+            <list>
+                <value>hello</value>
+                <value>hello2</value>
+                <value>hello</value>
+                <value>hello23</value>
+                <value>hello2</value>
+            </list>
+        </property>
+    </bean>
+
 </beans>
