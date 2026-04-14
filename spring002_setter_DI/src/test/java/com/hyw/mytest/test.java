@@ -45,6 +45,9 @@ public class test {
         MapService mapService = beanFactory.getBean("MapService", MapService.class);
         System.out.println(mapService.toString());
 
+        PropertiesService propertiesService = beanFactory.getBean("PropertiesService", PropertiesService.class);
+        System.out.println(propertiesService.toString());
+
         logger.info("my info:");
     }
 }

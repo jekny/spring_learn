@@ -31,13 +31,13 @@
         </encoder>
     </appender>
 
-    <!-- 针对特定包的日志级别（示例：Spring框架设为WARN，减少干扰） -->
+    <!-- 针对特定包的日志级别（示例：WARN,DEBUG,INFO） -->
     <logger name="org.springframework" level="DEBUG" />
     <logger name="org.springframework.boot" level="INFO" />
 <!--    <logger name="com.hyw.test" level="DEBUG" />   &lt;!&ndash; 替换为你的项目包名 &ndash;&gt;-->
 
     <!-- 根日志级别：所有未单独配置的logger继承此级别 -->
-    <root level="INFO">
+    <root level="DEBUG">
         <appender-ref ref="CONSOLE" />
         <appender-ref ref="FILE" />
     </root>
