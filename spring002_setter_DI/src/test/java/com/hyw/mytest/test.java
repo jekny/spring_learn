@@ -31,5 +31,8 @@ public class test {
 
         ArrayService arrayService = beanFactory.getBean("ArrayService", ArrayService.class);
         System.out.println(arrayService.toString());
+
+        SetService setService = beanFactory.getBean("SetService", SetService.class);
+        System.out.println(setService.toString());
     }
 }

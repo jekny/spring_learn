@@ -50,4 +50,18 @@
         </property>
     </bean>
 
+    <bean id="SetService" class="com.hyw.mytest.bean.service.SetService">
+        <property name="sets">
+            <set>
+                <value>hello</value>
+                <value>hello2</value>
+                <value>hellow</value>
+                <value>hello3e4</value>
+                <value>hello5</value>
+                <value>hello5</value>
+                <value>hello</value>
+            </set>
+        </property>
+    </bean>
+
 </beans>
