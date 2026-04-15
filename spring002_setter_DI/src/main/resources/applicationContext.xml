@@ -7,7 +7,7 @@
 
     <bean id="UserBean1" class="com.hyw.mytest.bean.dao.UserBean"/>
 
-    <bean id="UserService1" class="com.hyw.mytest.bean.service.UserService" >
+    <bean id="UserService1" class="com.hyw.mytest.bean.service.UserService"  scope="prototype">
 <!--        通过该属性推断出setter方法名，然后注入（手动装配）-->
         <property name="userBean" ref="UserBean1"/>
     </bean>

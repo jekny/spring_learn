@@ -26,6 +26,12 @@ public class test {
         BeanFactory beanFactory = new ClassPathXmlApplicationContext("applicationContext.xml");
         UserService userService1 = beanFactory.getBean("UserService1", UserService.class);
         userService1.save();
+        System.out.println(beanFactory.getBean("UserService1", UserService.class));
+        System.out.println(beanFactory.getBean("UserService1", UserService.class));
+        System.out.println(beanFactory.getBean("UserService1", UserService.class));
+        System.out.println(beanFactory.getBean("UserService1", UserService.class));
+        System.out.println(beanFactory.getBean("UserService1", UserService.class));
+        System.out.println(beanFactory.getBean("UserService1", UserService.class));
 
         ConstructService constructService1 = beanFactory.getBean("ConstructService1", ConstructService.class);
         constructService1.save();
