@@ -49,5 +49,9 @@ public class test {
         System.out.println(propertiesService.toString());
 
         logger.info("my info:");
+
+        BeanFactory beanFactory1 = new ClassPathXmlApplicationContext("propertiesout.xml");
+        PropertiesOutService propertiesOutService = beanFactory1.getBean("PropertiesOutService", PropertiesOutService.class);
+        System.out.println(propertiesOutService.toString());
     }
 }

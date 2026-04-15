@@ -37,9 +37,9 @@
 <!--    <logger name="com.hyw.test" level="DEBUG" />   &lt;!&ndash; 替换为你的项目包名 &ndash;&gt;-->
 
     <!-- 根日志级别：所有未单独配置的logger继承此级别 -->
-    <root level="INFO">
+    <user level="INFO">
         <appender-ref ref="CONSOLE" />
         <appender-ref ref="FILE" />
-    </root>
+    </user>
 
 </configuration>
