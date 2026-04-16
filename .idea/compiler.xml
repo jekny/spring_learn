@@ -6,9 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring001_first" />
         <module name="spring002_setter_DI" />
         <module name="ademo" />
+        <module name="sprin003_factory" />
+        <module name="spring001_first" />
       </profile>
     </annotationProcessing>
   </component>
