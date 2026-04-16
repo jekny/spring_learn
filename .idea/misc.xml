@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/ademo/pom.xml" />
         <option value="$PROJECT_DIR$/spring002_setter_DI/pom.xml" />
         <option value="$PROJECT_DIR$/sprin003_factory/pom.xml" />
+        <option value="$PROJECT_DIR$/spring004_simplefactory_test2/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
