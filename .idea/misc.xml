@@ -13,6 +13,7 @@
         <option value="$PROJECT_DIR$/sprin003_factory/pom.xml" />
         <option value="$PROJECT_DIR$/spring004_simplefactory_test2/pom.xml" />
         <option value="$PROJECT_DIR$/spring005_factorymathod_test/pom.xml" />
+        <option value="$PROJECT_DIR$/spring006_beancreate_bysimplefactory/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

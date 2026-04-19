@@ -6,12 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring002_setter_DI" />
         <module name="ademo" />
+        <module name="spring005_factorymathod_test" />
+        <module name="spring002_setter_DI" />
         <module name="sprin003_factory" />
         <module name="spring004_simplefactory_test2" />
         <module name="spring001_first" />
-        <module name="spring005_factorymathod_test" />
+        <module name="spring006_beancreate_bysimplefactory" />
       </profile>
     </annotationProcessing>
   </component>
