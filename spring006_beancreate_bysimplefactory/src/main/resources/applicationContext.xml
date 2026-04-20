@@ -3,4 +3,8 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="createqiang" class="com.hyw.mytest.QiangFactory" factory-method="getQiang"/>
+
+<!--    通过工厂方法模式实例化bean(工厂是一个具体工厂，需要具体的工厂方法对象去调里面的具体方法，而简单工厂模式是)-->
+    <bean id="paoFactory" class="com.hyw.mytest.PaoFactory"/>
+    <bean id="pao" factory-bean="paoFactory" factory-method="get"/>
 </beans>

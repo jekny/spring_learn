@@ -1,7 +1,9 @@
+import com.hyw.mytest.Pao;
 import com.hyw.mytest.Qiang;
 import com.hyw.mytest.QiangFactory;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.BeanFactory;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -18,5 +20,12 @@ public class test {
         BeanFactory beanFactory = new ClassPathXmlApplicationContext("applicationContext.xml");
         Qiang createqiang = beanFactory.getBean("createqiang", Qiang.class);
         System.out.println(createqiang);
+    }
+
+    @Test
+    public void test02(){
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+        Pao pao = applicationContext.getBean("pao", Pao.class);
+        System.out.println(pao);
     }
 }
