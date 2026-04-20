@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ademo" />
+        <module name="spring_007_beanlifecycle_5pate" />
         <module name="spring005_factorymathod_test" />
         <module name="spring002_setter_DI" />
         <module name="sprin003_factory" />
