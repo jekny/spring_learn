@@ -1,5 +1,10 @@
 package com.hyw.mytest;
 
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.BeanFactoryAware;
+import org.springframework.context.support.DefaultLifecycleProcessor;
+
 /**
  * ClassName: BeanLife
  * Description:
@@ -8,7 +13,8 @@ package com.hyw.mytest;
  * @Create 2026/4/20 16:26
  * @Version 1.0
  */
-public class BeanLife {
+public class BeanLife implements BeanFactoryAware {
+
     private String name;
 
     public BeanLife() {
@@ -26,5 +32,10 @@ public class BeanLife {
 
     public void distroy(){
         System.out.println("5.销毁bean");
+    }
+
+    @Override
+    public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
+        
     }
 }
