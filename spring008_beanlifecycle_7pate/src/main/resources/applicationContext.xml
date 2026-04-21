@@ -3,6 +3,9 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+<!--    这里的bean后处理器会应用与这个配置文件的所有bean-->
+    <bean class="com.hyw.mytest.BeanAfter"/>
+
     <bean id="BeanLife" class="com.hyw.mytest.BeanLife" init-method="init" destroy-method="distroy">
         <property name="name" value="hello"/>
     </bean>
