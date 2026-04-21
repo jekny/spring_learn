@@ -36,6 +36,6 @@ public class BeanLife implements BeanFactoryAware {
 
     @Override
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
-        
+
     }
 }
