@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ademo" />
         <module name="spring005_factorymathod_test" />
+        <module name="spring009_cyclerery_setter" />
         <module name="spring002_setter_DI" />
         <module name="spring008_beanlifecycle_7pate" />
         <module name="sprin003_factory" />
