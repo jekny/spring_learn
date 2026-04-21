@@ -2,4 +2,14 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="woman" class="com.hyw.mytest.Woman" scope="singleton">
+        <property name="name" value="女娃"/>
+        <property name="man" ref="man"/>
+    </bean>
+
+    <bean id="man" class="com.hyw.mytest.Man" scope="singleton">
+        <property name="name" value="张三"/>
+        <property name="woman" ref="woman"/>
+    </bean>
 </beans>
