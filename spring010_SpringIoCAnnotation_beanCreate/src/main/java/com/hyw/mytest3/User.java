@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  * @Create 2026/4/23 7:25
  * @Version 1.0
  */
-@Component
+@Component("user01")
 public class User {
 
 }

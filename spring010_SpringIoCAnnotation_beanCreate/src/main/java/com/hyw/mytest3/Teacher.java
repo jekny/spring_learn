@@ -1,6 +1,7 @@
 package com.hyw.mytest3;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 /**
@@ -25,7 +26,7 @@ public class Teacher {
     }
 
     @Autowired
-    public Teacher(User user, User2 user2) {
+    public Teacher(@Qualifier("user01") User user, @Qualifier("user02") User2 user2) {
         this.user = user;
         this.user2 = user2;
     }
