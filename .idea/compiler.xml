@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ademo" />
+        <module name="spring010_SpringIoCAnnotation_beanCreate" />
         <module name="spring005_factorymathod_test" />
         <module name="spring009_cyclerery_setter" />
         <module name="spring002_setter_DI" />

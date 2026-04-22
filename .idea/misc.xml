@@ -18,6 +18,7 @@
         <option value="$PROJECT_DIR$/spring007_beanlifecycle_5pate/pom.xml" />
         <option value="$PROJECT_DIR$/spring008_beanlifecycle_7pate/pom.xml" />
         <option value="$PROJECT_DIR$/spring009_cyclerery_setter/pom.xml" />
+        <option value="$PROJECT_DIR$/spring010_SpringIoCAnnotation_beanCreate/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
