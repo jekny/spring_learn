@@ -3,6 +3,7 @@ import com.hyw.mytest.UserDao;
 import com.hyw.mytest.UserService;
 import com.hyw.mytest2.MyController;
 import com.hyw.mytest3.Mytest3;
+import com.hyw.mytest3.Teacher;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ApplicationObjectSupport;
@@ -36,5 +37,8 @@ public class MyTest {
         ApplicationContext a = new ClassPathXmlApplicationContext("applicationContext.xml");
         Mytest3 mytest3 = a.getBean("mytest3", Mytest3.class);
         System.out.println(mytest3);
+        System.out.println("-----------------------------");
+        Teacher teacher = a.getBean("teacher", Teacher.class);
+        System.out.println(teacher.toString());
     }
 }
