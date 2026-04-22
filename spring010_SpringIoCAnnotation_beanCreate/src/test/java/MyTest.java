@@ -1,4 +1,9 @@
+import com.hyw.mytest.UserController;
+import com.hyw.mytest.UserDao;
+import com.hyw.mytest.UserService;
 import org.junit.jupiter.api.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * ClassName: MyTest
@@ -11,6 +16,12 @@ import org.junit.jupiter.api.Test;
 public class MyTest {
     @Test
     public void test01(){
-        
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+        UserController userController = applicationContext.getBean("userController", UserController.class);
+        UserService userService = applicationContext.getBean("userService", UserService.class);
+        UserDao userDao = applicationContext.getBean("userDao", UserDao.class);
+        System.out.println(userController);
+        System.out.println(userService);
+        System.out.println(userDao);
     }
 }
