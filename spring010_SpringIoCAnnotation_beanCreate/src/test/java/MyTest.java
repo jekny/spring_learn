@@ -1,6 +1,7 @@
 import com.hyw.mytest.UserController;
 import com.hyw.mytest.UserDao;
 import com.hyw.mytest.UserService;
+import com.hyw.mytest2.MyController;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -23,5 +24,8 @@ public class MyTest {
         System.out.println(userController);
         System.out.println(userService);
         System.out.println(userDao);
+
+        MyController myController = applicationContext.getBean("myController", MyController.class);
+        System.out.println(myController);
     }
 }
