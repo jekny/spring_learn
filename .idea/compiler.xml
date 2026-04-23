@@ -7,17 +7,18 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ademo" />
-        <module name="spring010_SpringIoCAnnotation_beanCreate" />
-        <module name="spring005_factorymathod_test" />
-        <module name="spring009_cyclerery_setter" />
         <module name="spring002_setter_DI" />
         <module name="spring008_beanlifecycle_7pate" />
         <module name="spring011_AllAnnotationDevelop" />
+        <module name="spring007_beanlifecycle_5pate" />
+        <module name="spring010_SpringIoCAnnotation_beanCreate" />
+        <module name="spring012_proxy" />
+        <module name="spring005_factorymathod_test" />
+        <module name="spring009_cyclerery_setter" />
         <module name="sprin003_factory" />
         <module name="spring004_simplefactory_test2" />
         <module name="spring001_first" />
         <module name="spring006_beancreate_bysimplefactory" />
-        <module name="spring007_beanlifecycle_5pate" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
