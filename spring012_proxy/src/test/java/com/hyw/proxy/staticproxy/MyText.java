@@ -2,6 +2,7 @@ package com.hyw.proxy.staticproxy;
 
 import com.hyw.mytest.staticproxy.OrderImpl;
 import com.hyw.mytest.staticproxy.OrderProxy;
+import com.hyw.mytest.staticproxy.OrderProxy2;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -15,7 +16,7 @@ import org.junit.jupiter.api.Test;
 public class MyText {
     @Test
     public void test() throws InterruptedException {
-        OrderProxy orderProxy = new OrderProxy(new OrderImpl());//这里就相当于目标类找了一个代理类
+        OrderProxy2 orderProxy = new OrderProxy2(new OrderImpl());//这里就相当于目标类找了一个代理类
         orderProxy.create();
         orderProxy.use();
         orderProxy.destroy();
