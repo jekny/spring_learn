@@ -1,6 +1,7 @@
 package com.hyw.proxy.modifyproxy;
 
 import com.hyw.mytest.modifyproxy.TimeInvocation;
+import com.hyw.mytest.modifyproxy.TimeInvocation2;
 import com.hyw.mytest.modifyproxy.UserInterface;
 import com.hyw.mytest.modifyproxy.impl.UserImpl;
 import org.junit.jupiter.api.Test;
@@ -19,7 +20,7 @@ public class MyText {
     @Test
     public void test(){
         UserInterface target = new UserImpl();
-        UserInterface userproxy = (UserInterface)Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass().getInterfaces(), new TimeInvocation(target));
+        UserInterface userproxy = (UserInterface)Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass().getInterfaces(), new TimeInvocation2(target));
         userproxy.createUser();
         userproxy.useUser();
         userproxy.destroyUser();
