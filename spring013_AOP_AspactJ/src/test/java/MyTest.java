@@ -31,6 +31,7 @@ public class MyTest {
     public void test02(){
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringConfig.class);
         UserImpl2 userImpl2 = applicationContext.getBean("userImpl2", UserImpl2.class);
+        //如果省略userImpl2名称的话，就会根据类型获取bean
         userImpl2.save();
     }
 }
