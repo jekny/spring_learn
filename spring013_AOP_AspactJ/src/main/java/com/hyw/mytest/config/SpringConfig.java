@@ -14,7 +14,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  */
 @Configuration
 @ComponentScan({"com.hyw.mytest"})
-@EnableAspectJAutoProxy(proxyTargetClass = true)//true是使用CGlib，默认JDK代理机制
+@EnableAspectJAutoProxy(proxyTargetClass = true)//开启自动代理(凡是带有@Aspect注解的bean都会自动生成代理对象),true是使用CGlib，默认JDK代理机制
 public class SpringConfig {
 
 }
