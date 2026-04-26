@@ -6,6 +6,7 @@ import com.hyw.mytest.modifyproxy.TimeInvocation3;
 import com.hyw.mytest.modifyproxy.UserInterface;
 import com.hyw.mytest.modifyproxy.impl.UserImpl;
 import com.hyw.mytest.modifyproxy.util.InvocationUtil;
+import com.hyw.mytest.modifyproxy.util.TimeInvocation4;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Proxy;
@@ -45,5 +46,14 @@ public class MyText {
         userProxy.createUser();
         userProxy.useUser();
         userProxy.destroyUser();
+    }
+
+    @Test
+    public void test04(){
+        UserImpl user = new UserImpl();
+        UserInterface proxy = (UserInterface) TimeInvocation4.getProxy(user);
+        proxy.createUser();
+        proxy.useUser();
+        proxy.destroyUser();
     }
 }

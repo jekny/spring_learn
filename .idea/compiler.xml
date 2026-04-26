@@ -6,7 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ademo" />
+        <module name="ademo (1)" />
+        <module name="ademo (2)" />
         <module name="spring002_setter_DI" />
         <module name="spring008_beanlifecycle_7pate" />
         <module name="spring011_AllAnnotationDevelop" />
@@ -22,6 +23,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="ademo" target="17" />
       <module name="spring_007_beanlifecycle_5pate" target="17" />
     </bytecodeTargetLevel>
   </component>
