@@ -22,6 +22,7 @@
         <option value="$PROJECT_DIR$/spring011_AllAnnotationDevelop/pom.xml" />
         <option value="$PROJECT_DIR$/spring012_proxy/pom.xml" />
         <option value="$PROJECT_DIR$/spring013_AOP_AspactJ/pom.xml" />
+        <option value="$PROJECT_DIR$/spring014_AOP_AllAnnocation_TX/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
