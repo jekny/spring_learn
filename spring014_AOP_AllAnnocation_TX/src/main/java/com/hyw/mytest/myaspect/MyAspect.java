@@ -23,9 +23,9 @@ public class MyAspect {
 
     @Around("myPointcut()")
     public Object MyAround(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
-        System.out.println("环绕通知kaishi执行");
+        System.out.println("环绕通知kaishi执行(模拟开启事务)");
         Object proceed = proceedingJoinPoint.proceed();
-        System.out.println("环绕通知jieshu执行");
+        System.out.println("环绕通知jieshu执行(模拟开启事务)");
         return proceed;
     }
 }
