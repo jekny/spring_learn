@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class TestAspect2 {
 
-    @After("execution(* com.hyw.mytest..*(..))")
+    @After("execution(* com.hyw.mytest..*(..))")//当然，后置通知等其他通知类型也可以写在同一个切面类中，切面 = 切点 + 通知
     public void getAfter(){
         System.out.println("我是后置通知");
     }
