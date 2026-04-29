@@ -11,6 +11,7 @@
         <module name="spring002_setter_DI" />
         <module name="spring008_beanlifecycle_7pate" />
         <module name="spring011_AllAnnotationDevelop" />
+        <module name="spring015_spring_and_mybatis" />
         <module name="spring007_beanlifecycle_5pate" />
         <module name="spring010_SpringIoCAnnotation_beanCreate" />
         <module name="spring012_proxy" />
