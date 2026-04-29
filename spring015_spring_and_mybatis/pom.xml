@@ -14,4 +14,73 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+<!--    1. 依赖全景图
+依赖	你能用它做什么
+spring-context	Spring 的 IoC 容器。用它管理对象（@Component, @Service, @Autowired）以及加载配置类。
+spring-jdbc	Spring 对 JDBC 的封装。虽然 MyBatis 自己能访问数据库，但配合 事务管理 时需要它。
+mysql-connector-j	MySQL 的驱动包。没有它，Java 代码连不上 MySQL。
+mybatis	MyBatis 核心。提供 SqlSession、动态 SQL、映射器接口等所有原始功能。
+mybatis-spring	桥梁依赖。它把 MyBatis 的组件（如 SqlSessionFactory）无缝注册到 Spring 容器中，让你能用 @Autowired 直接注入 Mapper 接口。
+HikariCP	目前最快的数据库连接池。Spring Boot 2.x 后默认就用它，这里需要手动加入来优化连接性能。
+lombok	简化实体类代码。@Data 自动生成 getter/setter/toString，以后写 User、Order 这些类快很多。
+spring-aspects	AOP 切面支持。如果以后想在数据库操作前后加日志、事务增强，会用到它。
+junit-jupiter-api	单元测试框架。写完 Mapper 后，可以直接通过测试类验证 SQL 是否正确，而不启动整个 Web 项目。-->
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>6.2.13</version>
+        </dependency>
+<!--        jdbc-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>7.0.6</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>8.0.33</version>
+        </dependency>
+<!--        mybais依赖-->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.5.19</version>
+        </dependency>
+<!--        spring集成mybatis核心依赖-->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+            <version>3.0.5</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+            <version>7.0.2</version>
+            <scope>compile</scope>
+        </dependency>
+
+<!--        @data注解自动生成get、set函数-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.42</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>7.0.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.13.4</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
 </project>
