@@ -32,6 +32,7 @@ public class AccountServiceImpl implements AccountService {
         if(fromAct.getBalance().compareTo(amount) < 0){
             throw new RuntimeException("余额不足");
         }
+        //因为类型是BigDasimal，所以用.subtract和.add函数对比
         Account toAct = accountMapper.selectByActNo(toActNo);
         fromAct.setBalance(fromAct.getBalance().subtract(amount));
         toAct.setBalance(toAct.getBalance().add(amount));
