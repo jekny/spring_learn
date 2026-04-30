@@ -32,10 +32,11 @@ junit-jupiter-api	单元测试框架。写完 Mapper 后，可以直接通过测
             <version>6.2.13</version>
         </dependency>
 <!--        jdbc-->
+        <!-- Source: https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
-            <version>7.0.6</version>
+            <version>6.2.16</version>
             <scope>compile</scope>
         </dependency>
         <dependency>

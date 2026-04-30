@@ -29,10 +29,10 @@
 
 <!--    </environments>-->
 
-    <mappers>
-        <!--        其中一个sqlMapper.xml配置路径-->
-        <!--        mapper从根目录(resources)开始找-->
-<!--        <mapper resource="xxxMapper.xml"/>-->
-        <package name="com.hyw.mytest.mapper"/>
-    </mappers>
+<!--    <mappers>-->
+<!--        &lt;!&ndash;        其中一个sqlMapper.xml配置路径&ndash;&gt;-->
+<!--        &lt;!&ndash;        mapper从根目录(resources)开始找&ndash;&gt;-->
+<!--&lt;!&ndash;        <mapper resource="xxxMapper.xml"/>&ndash;&gt;-->
+<!--        <package name="com.hyw.mytest.mapper"/>-->
+<!--    </mappers>-->
 </configuration>

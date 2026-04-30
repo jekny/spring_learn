@@ -1,6 +1,7 @@
 package com.hyw.mytest.mapper;
 
 import com.hyw.mytest.entity.Account;
+import org.springframework.stereotype.Component;
 
 /**
  * ClassName: AccountMapper

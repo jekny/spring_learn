@@ -5,7 +5,7 @@
 <!--映射文件,专门写sql语句的文件,映射成对象-->
 <mapper namespace="com.hyw.mytest.mapper.AccountMapper">
     <update id="updateBalanceByActNo">
-        update t_act set balance = #{balance} where act_no = #{acoNo}
+        update t_act set balance = #{balance} where act_no = #{actNo}
     </update>
 
 
