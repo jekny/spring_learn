@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--映射文件,专门写sql语句的文件,映射成对象-->
+<mapper namespace="com.hyw.mytest.mapper.AccountMapper">
+    <update id="updateBalanceByActNo">
+        update t_act set balance = #{balance} where act_no = #{acoNo}
+    </update>
+
+
+    <select id="selectByActNo" resultType="Account">
+        select id,act_no,balance from t_act where act_no = #{actNo}
+    </select>
+</mapper>
