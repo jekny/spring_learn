@@ -15,6 +15,7 @@
         <module name="spring007_beanlifecycle_5pate" />
         <module name="spring010_SpringIoCAnnotation_beanCreate" />
         <module name="spring012_proxy" />
+        <module name="spring016_spring_mybatis_test2" />
         <module name="spring005_factorymathod_test" />
         <module name="spring009_cyclerery_setter" />
         <module name="sprin003_factory" />
