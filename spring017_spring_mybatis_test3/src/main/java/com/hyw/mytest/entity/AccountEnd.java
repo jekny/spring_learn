@@ -1,6 +1,7 @@
 package com.hyw.mytest.entity;
 
 import lombok.Data;
+import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 
