@@ -1,12 +1,16 @@
 package com.hyw.mytest.config;
 
 import com.zaxxer.hikari.HikariDataSource;
+import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.transaction.TransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.transaction.annotation.TransactionManagementConfigurer;
 
 import javax.sql.DataSource;
 
@@ -42,5 +46,30 @@ public class SpringConfig2 {
         hikariDataSource.setUsername(user);
         hikariDataSource.setPassword(password);
         return hikariDataSource;
+    }
+
+    @Bean
+    SqlSessionFactoryBean sqlSessionFactoryBean(
+            DataSource dataSource,
+            @Value("${mybatis.data.arries}")
+            String arries,
+            @Value("${mybatis.data.mybatisconfig}")
+            String config
+    ){
+        SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
+        sqlSessionFactoryBean.setDataSource(dataSource);
+        Resource resource = new ClassPathResource(config);
+        sqlSessionFactoryBean.setConfigLocation(resource);
+        sqlSessionFactoryBean.setTypeAliasesPackage(arries);
+        return sqlSessionFactoryBean;
+    }
+
+    @Bean
+    DataSourceTransactionManager transactionManager(
+            DataSource dataSource
+    ){
+        DataSourceTransactionManager dataSourceTransactionManager = new DataSourceTransactionManager();
+        dataSourceTransactionManager.setDataSource(dataSource);
+        return dataSourceTransactionManager;
     }
 }
