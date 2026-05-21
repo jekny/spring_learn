@@ -26,7 +26,7 @@ import javax.sql.DataSource;
 @ComponentScan(value = {"com.hyw.mytest"})
 @EnableAspectJAutoProxy(proxyTargetClass = true)
 @EnableTransactionManagement(proxyTargetClass = true)
-@MapperScan(value = {"com.hyw.matest.mapper"})
+@MapperScan(value = {"com.hyw.mytest.mapper"})
 @PropertySource("classpath:database.properties")
 public class SpringConfig2 {
     @Bean//配置数据源
